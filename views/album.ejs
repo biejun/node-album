@@ -1,0 +1,27 @@
+<%- include("header", { title: album.name + ' - 相册'}) %>
+<div id="app" data-render="album">
+	<div class="main">
+		<div class="top-header">
+			<h1 class="title"><a href="<%=prod.baseUrl%>"><%= website.title %></a> / 归档： <%= album.name %></h1>
+		</div>
+		<div class="artist">
+			<div class="album">
+				<div class="album-date">
+					<div class="day"><%= album.day%></div>
+					<div><%= album.date%></div>
+				</div>
+				<div class="album-photo">
+					<% data.photos.forEach(picture => {%>
+					<div class="photo image-zoom">
+						<img src="<%= picture.image %>" alt="<%= picture.meta %>">
+					</div>
+					<% })%>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<%=website.description%>
+		</div>
+	</div>
+</div>
+<% include footer %>

@@ -1,0 +1,345 @@
+html,body{
+	
+}
+#app{
+	background: url(../img/bg.jpg) no-repeat top center/100% 120px;
+}
+.top-header{
+    padding: 30px 0;
+    height: 80px;
+}
+
+.footer{
+    text-align: center;
+    padding: 50px;
+    color: #999;
+}
+
+.title{
+    font-size: 30px;
+    float: left;
+    margin: 8px 0 0;
+}
+
+.title a{
+    text-decoration: none;
+    color: #222;
+}
+.title a:hover{
+    text-decoration: underline;
+}
+
+
+.btn{
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #dcdfe6;
+    color: #606266;
+    -webkit-appearance: none;
+    text-align: center;
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    transition: .1s;
+    font-weight: 500;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    padding: 8px 20px;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.upload{
+	float: right;
+	width: 130px;
+	padding: 10px 15px;
+	text-align: center;
+	border: 1px solid #6d7075;
+	border-radius: 3px;
+	box-shadow: 1px 3px 0px 1px rgb(117, 117, 117);
+	cursor: pointer;
+	background: #fff;
+}
+
+.upload:hover{
+    background-color: #e3e4e6;
+}
+
+.upload .icon{
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.main{
+    width: 930px;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+.artist{
+	margin-top: 20px;
+}
+
+.artist .album{
+    position: relative;
+    padding-left: 120px;
+    min-height: 100px;
+    margin-bottom: 30px;
+}
+
+.artist .album .album-date{
+    float: left;
+    margin-left: -120px;
+    text-align: center;
+}
+
+.artist .album .album-date .day{
+    font-size: 30px;
+}
+
+.artist .album .album-photo{
+
+}
+
+.artist .album .album-photo .photo{
+    width: 160px;
+    height: 160px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    float: left;
+    padding: 10px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.artist .album .album-photo .photo:hover{
+    box-shadow: 0 0 3px 0 rgba(0,0,0, .1);
+}
+
+.artist .album .album-photo .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.artist .album .album-photo:after{
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.artist .album .album-photo:before{
+    content: "";
+    display: table;
+}
+
+.artist .album .more-photo{
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+}
+.artist .album .more-photo a{
+	color: #555;
+	text-decoration: none;
+}
+.artist .album .more-photo a:hover{
+    text-decoration: underline;
+	color: #333;
+}
+
+.upload-box{
+    position: absolute;
+    top: 6vh;
+    left: 50%;
+    right: 50%;
+    margin-left: -300px;
+    margin-right: -300px;
+    width: 600px;
+    padding: 30px 20px;
+    background-color: #fff;
+    box-shadow: 0 0 20px 3px rgb(169, 169, 169);
+}
+
+.upload-box h3{
+    margin: 0;
+    font-size: 14px;
+}
+
+.upload-box .close{
+    float: right;
+    width: 20px;
+    height: 20px;
+    margin-top: -2px;
+    cursor: pointer;
+}
+
+.upload-box .close .icon{
+    width: 18px;
+    height: 18px;
+    fill: #888;
+}
+
+.upload-box .files-wrap{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.upload-box .upload-btn{
+
+}
+
+.upload-box .files-list {
+    margin-left: -5px;
+}
+
+.upload-box .files-list .image-preview{
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid #eee;
+    margin: 5px;
+}
+
+.upload-box .files-list .image-preview img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.upload-box .upload-btn .select-files{
+    display: none;
+}
+
+.upload-box .upload-text{
+    -webkit-appearance: none;
+    background: #fff none;
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    box-sizing: border-box;
+    color: #606266;
+    display: inline-block;
+    min-height: 40px;
+    line-height: 1.777;
+    font-size: 12px;
+    outline: none;
+    padding: 10px 15px;
+    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    width: 100%;
+}
+
+.upload-box .upload-submit{
+    margin-top: 10px;
+    background-color: #ffd100;
+    border-color: #ffd100;
+    color: #222;
+}
+
+.image-zoom-mask{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, .8);
+}
+
+.image-zoom-wrap{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+}
+
+.image-zoom-wrap .close{
+    position: fixed;
+    right: 60px;
+    top: 50px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    line-height: 60px;
+	text-align: center;
+	background-color: rgba(0,0,0,.3);
+	z-index: 99;
+}
+
+.image-zoom-wrap .close .icon{
+	display: inline-block;
+    width: 30px;
+    height: 30px;
+    fill: #fff;
+}
+
+.image-zoom-wrap .image-box {
+    position: relative;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 2px;
+    border: 1px solid #e2e2e2;
+    box-shadow: 0 0 20px 3px rgb(220, 220, 220);
+    box-sizing: border-box;
+    width: 400px;
+	padding: 35px 15px;
+	transition: all 0.2s ease;
+}
+
+.image-zoom-wrap .image-box.is-loading .image-src{
+	opacity: 0.8;
+}
+
+.image-zoom-wrap .image-box .image-loading{
+	position: absolute;
+	top: 120px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+}
+
+.image-zoom-wrap .image-box .image-loading .loading-text{
+	width: 200px;
+	margin: 0 auto;
+	background: #2b79187a;
+	color: #fff;
+}
+
+.image-zoom-wrap .image-box .image-text{
+    padding-top: 30px;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.777;
+}
+.image-zoom-wrap .image-box .image-src{
+	position: relative;
+}
+.image-zoom-wrap .image-box .image-src:before{
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 3px;
+	box-shadow: inset 0 0 5px 0px rgba(0, 0, 0, 0.3);
+}
+.image-zoom-wrap .image-box .image-src img{
+    width: 100%;
+}
+
+.blur{
+    /* IE6~IE9 */
+    filter: progid: DXImageTransform.Microsoft.Blur(PixelRadius=18, MakeShadow=false);
+    -moz-filter: blur(18px);
+    filter: blur(18px);
+}

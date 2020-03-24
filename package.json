@@ -1,0 +1,22 @@
+{
+  "name": "artist",
+  "version": "1.0.0",
+  "description": "album",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "koa": "^2.7.0",
+    "koa-body": "^4.1.0",
+    "koa-router": "^7.4.0",
+    "koa-static-cache": "^5.1.2",
+    "koa-views": "^6.2.0",
+    "sharp": "^0.22.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon app",
+    "serve": "node app"
+  },
+  "author": "biejun",
+  "license": "ISC"
+}

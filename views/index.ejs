@@ -1,0 +1,64 @@
+<%- include header %>
+<div id="app" data-render="index">
+	<div class="main">
+		<div class="top-header">
+			<h1 class="title"><%= website.title %></h1>
+			<div id="upload-button" class="upload">
+				<svg viewBox="0 0 1024 1024" class="icon">
+					<path d="M576.112 98.152l-32.164-34.284-31.849 34.284-0.055 605.606h64.013z" p-id="2022"></path>
+					<path d="M512.112 98.228L301.011 308.926l45.19 45.138 211.101-210.699z" p-id="2023"></path>
+					<path d="M530.879 143.366l207.905 207.502 45.19-45.138L576.068 98.228zM192.037 831.721H897.5v63.677H192.037zM128.025 640.277h64.012v255.675h-64.012z" p-id="2024"></path>
+					<path d="M895.96 639.965h64.072v255.426H895.96z" p-id="2025"></path>
+				</svg>
+				上传图片
+			</div>
+		</div>
+		<div class="artist">
+		    <% data.forEach(row => {%>
+		    <div class="album">
+		        <div class="album-date">
+		            <div class="day"><%= row.album.day%></div>
+		            <div><%= row.album.date%></div>
+		        </div>
+		        <div class="album-photo">
+		            <% row.pictures.photos.forEach(picture => {%>
+		            <div class="photo image-zoom">
+		                <img src="<%= picture.image %>" alt="<%= picture.meta%>">
+		            </div>
+		            <% })%>
+		        </div>
+		        <% if (row.pictures.count) { %>
+				<div  class="more-photo">
+					<a href="/album/<%= row.album.name %>" title="<%= row.album.name %>">当前日期下还有更多图片</a>
+				</div>
+		        <% } %>
+		    </div>
+		    <% })%>
+		</div>
+		<div class="footer">
+		    <%=website.description%>
+		</div>
+	</div>
+</div>
+<div id="upload-box" class="upload-box" style="display: none;">
+    <h3>
+        <div class="close">
+            <svg class="icon" viewBox="0 0 1024 1024">
+                <path d="M810.666667 273.493333L750.506667 213.333333 512 451.84 273.493333 213.333333 213.333333 273.493333 451.84 512 213.333333 750.506667 273.493333 810.666667 512 572.16 750.506667 810.666667 810.666667 750.506667 572.16 512z" p-id="2750"></path>
+            </svg>
+        </div>
+        上传图片
+    </h3>
+    <form id="upload-form" enctype="multipart/form-data">
+        <div class="files-wrap">
+            <button type="button" class="btn upload-btn">
+                <span>选择图片</span>
+                <input type="file" name="file" multiple class="select-files">
+            </button>
+            <div class="files-list"></div>
+        </div>
+        <textarea name="text" class="upload-text" rows="2" placeholder="顺便说两句"></textarea>
+        <button type="button" class="btn upload-submit">提交</button>
+    </form>
+</div>
+<% include footer %>
