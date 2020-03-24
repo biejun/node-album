@@ -104,7 +104,7 @@ dist
 .tern-port
 
 # WebStorm
-.idea/
+.idea
 
 # Mac OS
 .DS_Store
