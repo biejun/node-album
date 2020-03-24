@@ -111,3 +111,5 @@ dist
 */.DS_Store
 
 static/upload/
+
+package-lock.json
