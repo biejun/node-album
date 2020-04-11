@@ -366,18 +366,31 @@ html,body{
 		margin-left: -70px;
 	}
 	
+	.artist .album .album-photo{
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+	}
+	
+	.artist .album .album-photo:before,
+	.artist .album .album-photo:after{
+		display: none;
+	}
+	
 	.artist .album .album-photo .photo{
-		width: 80px;
+		padding: 3px;
+		flex: 0 0 30%;
+		max-width: 30%;
 		height: 80px;
-		padding: 5px;
-		margin-left: 5px;
-		margin-right: 5px;
-		margin-bottom: 10px;
+		margin: 0;
+		margin-bottom: 12px;
+		min-height: 1px;
 		box-sizing: border-box;
 	}
 	
 	.image-zoom-wrap .image-box{
 		width: 100%!important;
+		border: none;
 	}
 	.image-zoom-wrap .close{
 		right: 10px;
