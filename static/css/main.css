@@ -343,3 +343,55 @@ html,body{
     -moz-filter: blur(18px);
     filter: blur(18px);
 }
+
+@media (max-width: 768px){
+	#app{
+		background-size: 300% 110px;
+	}
+	
+	.title{
+		margin-left: 10px;
+	}
+	
+	.main{
+		width: 100%;
+		padding: 0 15px;
+		box-sizing: border-box;
+	}
+	
+	.artist .album{
+		padding-left: 70px;
+	}
+	.artist .album .album-date{
+		margin-left: -70px;
+	}
+	
+	.artist .album .album-photo .photo{
+		width: 80px;
+		height: 80px;
+		padding: 5px;
+		margin-left: 5px;
+		margin-right: 5px;
+		margin-bottom: 10px;
+		box-sizing: border-box;
+	}
+	
+	.image-zoom-wrap .image-box{
+		width: 100%!important;
+	}
+	.image-zoom-wrap .close{
+		right: 10px;
+		top: 5px;
+	}
+	
+	.upload-box{
+		position: fixed;
+		width: 100%;
+		margin: 0;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		box-sizing: border-box;
+	}
+}

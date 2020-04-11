@@ -119,7 +119,9 @@ function hasClass(el, className) {
 			xhr.onload=function(){
 				if(xhr.status === 200){
 					window.location.reload();
-				}
+				}else{
+          alert('Error Code: ' + xhr.status);
+        }
 			}
     });
 
