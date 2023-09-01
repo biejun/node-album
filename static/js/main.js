@@ -1,3 +1,4 @@
+/*change some */
 function id(id) {
   return document.getElementById(id);
 }
